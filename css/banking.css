@@ -1,0 +1,742 @@
+/*===============
+基本样式
+================*/
+html{
+    font-size: 62.5%;
+    color:#222;
+}
+
+::selection{
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+/*===============
+工具样式(一些通用的样式，！important是以这个样式为主，会覆盖元素本身的样式)
+================*/
+.center-block{
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.pull-right{
+    float:right !important;
+}
+.pull-left{
+    float: left !important;
+}
+.text-right{
+    text-align: right !important;
+}
+.text-left{
+    text-align: left !important;
+}
+.text-center{
+    text-align: center !important;
+}
+.hide{
+    display:none  !important;
+}
+/*display的隐藏将他的空间也挤占了*/
+.show{
+    display: block !important;
+}
+/*visibility的隐藏将他的空间没有挤占，还留了下来*/
+.invisible{
+    visibility: hidden;
+}
+.text-hide{
+    font:0/0 a;
+    color:transparent;
+    text-shadow:none;
+    background-color: transparent;
+
+    border: 0;
+}
+
+/*62-70行是清除浮动的最新方式，用到bfc*/
+.clearfix:before,
+.clearfix:after{
+    content:" ";
+    display: table;
+
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    clear: both;
+}
+a:link { text-decoration: none;
+
+}
+a:active { text-decoration:none}
+a:hover { text-decoration:none;}
+a:visited { text-decoration: none;}
+
+.top{
+    width: 100%;
+    height: 3rem;
+    background-color: #555555;
+    color: WHITE;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.top-left{
+    float: left;
+    line-height: 3rem;
+    /*overflow: hidden;*/
+
+}
+.top-right{
+    line-height: 3rem;
+    float: right;
+    margin-right: 3rem;
+}
+.top-right .denglu{
+    height: 3rem;
+    width: 7rem;
+    display:inline-block;
+}
+.top-right li{
+    float: left;
+    /*padding-right: 2rem;*/
+}
+li+li{
+    border-left: 0.1rem solid WHITE;
+    /*padding-left: 2rem;*/
+}
+.denglu:link{
+    color:WHITE;
+    text-align: center;
+}
+
+.denglu:hover,.denglu:visited{
+    background-color: #888888;
+    color: WHITE;
+}
+
+.top-two{
+    width: 90%;
+    height:5rem;
+    background-color: WHITE;
+    line-height: 5rem;
+    margin: 0 auto;
+
+}
+.top-two .logo{
+    float: left;
+    line-height:5rem;
+    height:5rem;
+    width: 10%;
+}
+
+.ad{
+    width: 100%;
+}
+
+.logo img{
+    padding-top: 1rem;
+}
+.top-two ul{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    height:5rem;
+    line-height:5rem;
+    /*width: 90%;*/
+}
+.top-two ul li{
+    display: inline-block;
+    border-left: 0.1rem solid #E5E5E5;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    overflow: hidden;
+}
+
+.top-two .indexing{
+    width: 8rem;
+    line-height: 5rem;
+}
+.indexing:link,.indexing:visited{
+    color: black;
+    text-align: center;
+}
+.indexing:hover{
+    color: orange;
+}
+.money{
+    width: 100%;
+    height: 5rem;
+    background-color: #888888;
+    line-height: 5rem;
+    padding-left:6rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.money .money-num{
+    float: left;
+}
+.money-border{
+    background-color: white;
+    color: orange;
+    font-size: 2rem;
+    padding: 5px;
+    box-shadow:1px 1px 1px #222222 inset;
+    border-radius: 5px;
+}
+.money-size{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.money .business{
+    float: right;
+    font-size:1.5rem;
+    margin-right:10%;
+}
+
+.business a:hover,.business a:visited,.business a:link{
+    color: white;
+}
+
+
+.introduced{
+    font-size: 1.5rem;
+    width:90%;
+    height: 8rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.introduced .safe{
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #D9D9D9;
+    float: left;
+    height: 8rem;
+    line-height: 2rem;
+    width: calc(100%/3   - 1rem);
+
+}
+.introduced .safe +.safe{
+    margin-left: 1.5rem;
+}
+.introduced .safe .introduced-left{
+    float: left;
+    color: orange;
+    line-height:4rem;
+    width: 40%;
+    text-align: center;
+}
+.introduced .safe .introduced-right{
+    float: left;
+    width: 60%;
+}
+.announce{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #D9D9D9;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
+}
+.announce-left:hover,.announce-left:visited,.announce-left:link{
+    color: black;
+}
+
+.announce-right:link,.announce-right:hover,.announce-right:visited{
+    color: orange;
+
+}
+.announce .announce-left{
+    float: left;
+    margin-left: 2rem;
+}
+.announce-left .time{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.announce .announce-right{
+    float: right;
+    margin-right: 2rem;
+}
+.produce{
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #D9D9D9;
+    border-left: 1px solid #D9D9D9;
+    border-right: 1px solid #D9D9D9;
+    border-top: 2px solid orange;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #D9D9D9;
+    margin-top: 3rem;
+    box-sizing: border-box;
+    height: 50rem;
+}
+.produce .produce-left{
+    box-sizing: border-box;
+    float: left;
+    /*width: calc(100%/5 - 0rem);*/
+    /*width: 22%;*/
+    height: 50rem;
+    text-align: center;
+    line-height: 5rem;
+}
+.produce .produce-left span{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.produce .produce-right{
+    box-sizing: border-box;
+    float: right;
+    height: 50rem;
+    border-left: 0.5px solid #D9D9D9;
+    /*width: calc(100%/4 * 3 - 0rem);*/
+    /*width: 77.9%;*/
+    width: calc(100%/6*4 - 0rem);
+}
+
+.produce-right .details{
+    height: 10rem;
+    /*width: 100%;*/
+    text-align: center;
+    overflow: hidden;
+}
+.details .month{
+    float: left;
+    width: 22%;
+    text-align: center;
+    height:8rem;
+    line-height: 6rem;
+
+}
+.details .month span{
+    font-size: 3rem;
+    color: #888888;
+}
+.details .income{
+    padding-top:1rem;
+    float: left;
+    width:58%;
+    height:8rem;
+    font-size: 1.5rem;
+
+    /*border-left:0.5px solid #D9D9D9;*/
+    /*background-color: burlywood;*/
+}
+.income .income-left span{
+    color: orange;
+    width: 100%;
+    display: block;
+}
+.income .income-left i{
+    display: block;
+    width: 100%;
+
+}
+.income .income-left{
+    float: left;
+    width: 50%;
+}
+
+.details .operate{
+    float: right;
+    /*background-color: red;*/
+    width: 20%;
+    height:8rem;
+    margin-top: 2rem;
+}
+.operate .operate-center{
+    width: 80%;
+    height: 5rem;
+    background-color: orange;
+    display: block;
+    border-radius: 5px;
+    margin: 0 auto;
+    line-height: 5rem;
+    font-size: 2rem;
+}
+.operate .operate-center-special{
+    width: 80%;
+    height: 5rem;
+    background-color:#C4C4C4;
+    display: block;
+    border-radius: 5px;
+    margin: 0 auto;
+    line-height: 5rem;
+    font-size: 2rem;
+}
+.operate-center:link,.operate-center:visited,.operate-center:hover{
+    color: red;
+    /*font-size: 2rem;*/
+}
+.operate-center-special:link,.operate-center-special:hover,.operate-center-special:visited{
+    color: red;;
+    /*font-size: 2rem;*/
+}
+.about{
+    padding-top:3rem;
+    width: 100%;
+    height: 18rem;
+    background-color: white;
+    border-top:1px solid #D9D9D9;
+    box-shadow: 0px 0px 0px 0.5px #D9D9D9;
+    margin-top: 3rem;
+    line-height:2.5rem;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+}
+.about-img{
+    float: left;
+    padding-left: 5%;
+    padding-right: 3%;
+}
+.about ul{
+    float: left;
+    font-size: 1.5rem;
+}
+.about ul+ul{
+    margin-left: calc(100%/15 - 0px);
+}
+.about ul a:link,.about ul a:visited,.about ul a:hover{
+    color: #888888;
+}
+footer{
+    width: 100%;
+    height: 12rem;
+    background-color: #EAEAEA;
+    box-sizing: border-box;
+}
+footer ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+footer p{
+    text-align: center;
+   color: #888888;
+}
+footer ul li .icon{
+    display: inline-block;
+    text-indent: -999rem;
+    margin-right: 1.5rem;
+    background: url(https://i.alipayobjects.com/e/201307/jebmKcbrh.png) no-repeat;
+    background-size: 466px 447px;
+    /*overflow: hidden;*/
+    text-align: center;
+}
+footer ul li .icon-zfywxk{
+    background-position:-369px -45px;
+    width: 38px;
+    height: 27px;
+    float: left;
+
+}
+footer ul li .icon-pcirk{
+    background-position: -110px -96px;
+    float: left;
+    width: 38px;
+    height: 40px;
+}
+footer ul li .icon-visayz{
+    background-position: -426px -90px;
+    float: left;
+    width: 70px;
+    height: 40px;
+}
+footer ul li .icon-vsjmfw{
+    background-position: -401px -186px;
+    float: left;
+    width: 65px;
+    height: 28px;
+}
+footer ul li .icon-visayz{
+    background-position: -426px -90px;
+    float: left;
+    width: 40px;
+    height: 28px;
+}
+footer ul li .icon-wlgs{
+    background-position: -48px -48px;
+    float: left;
+    width: 22px;
+    height: 30px;
+}
+footer ul li .icon-rzcx{
+    background-position: 0px -320px;
+    float: left;
+    width: 75px;
+    height:27px;
+}
+
+footer ul li .icon1{
+    background-size: 29px 99px;
+    float: left;
+    /*overflow: hidden;*/
+    background: url(https://os.alipayobjects.com/rmsportal/lybcjqloSPjMAFg.png) no-repeat;
+
+}
+footer ul li .icon-gs{
+    background-position: 0px 0px;
+    width: 50px;
+    height: 30px;
+}
+
+/*中屏*/
+@media screen and (min-width:481px) and (max-width: 768px) {
+    .top-two .logo{
+        width: 100%;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+    .header .top{
+        font-size: 1rem;
+        height: 2.5rem;
+        padding-left: 1rem;
+    }
+    .header .top-two{
+        align-items: center;
+        height: 10rem;
+    }
+    .top .top-left{
+        line-height: 2.5rem;
+    }
+    .top .top-right{
+        justify-content: space-around;
+        margin-right: 1rem;
+        line-height: 2.5rem;
+
+    }
+    .top-two ul{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .top-two ul li{
+        border: none;
+    }
+    .top-right .denglu{
+        width: 5rem;
+        height: 2.5rem;
+    }
+    .money{
+        padding-left: 1rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+
+    .money-size{
+        font-size: 1rem;
+    }
+    .money .business{
+        font-size: 1rem;
+        margin-right: calc(100%/20 - 1rem);
+
+    }
+
+    .introduced{
+        width: 90%;
+        font-size: 1.1rem;
+        height: 10rem;
+    }
+    .introduced .safe .introduced-left{
+        line-height:5rem;
+    }
+    .announce{
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    .produce{
+        width: 90%;
+        height: 70rem;
+    }
+    .produce .produce-left{
+        width: 100%;
+        height: 20rem;
+        border-bottom:0.5px solid #D9D9D9 ;
+    }
+    .produce .produce-left span{
+        font-size: 2.5rem;
+    }
+    .produce .produce-right{
+        width: 100%;
+    }
+
+    .details .month span{
+        font-size: 2.5rem;
+    }
+    .details .income{
+        font-size:1.2rem;
+    }
+    .operate .operate-center,.operate .operate-center-special{
+        font-size: 1.5rem;
+    }
+
+
+    .about .about-img{
+        display: none;
+        visibility: hidden;
+    }
+
+    .about ul{
+        /*margin-left: 1%;*/
+        font-size: 1.2rem;
+        width: calc(100%/5 - 1.75rem);
+        text-align: center;
+    }
+    .about ul+ul{
+        margin-left: 1rem;
+    }
+}
+
+
+/*小屏*/
+@media screen and (max-width: 480px){
+    .header .top{
+        font-size: 1.2rem;
+        height: 2.5rem;
+        padding-left: 1rem;
+        text-align: center;
+    }
+    .top .top-left{
+        display: none;
+        visibility: hidden;
+    }
+    .top .top-right{
+        width: 100%;
+        justify-content: space-between;
+        margin-right: 0rem;
+        line-height: 2.5rem;
+        align-items: center;
+    }
+    .top .top-left{
+        line-height: 2.5rem;
+    }
+    .top-two .logo{
+        width: 100%;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    .top-two ul{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .top-two ul li{
+        border: none;
+    }
+    .header .top-two{
+        align-items: center;
+        height: 10rem;
+    }
+    .money{
+        padding-left: 1rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+
+    .money-size{
+        font-size: 1rem;
+    }
+    .money .business{
+        font-size: 1rem;
+        margin-right: calc(100%/20 - 1rem);
+
+    }
+    .introduced{
+        width: 90%;
+        font-size: 1.1rem;
+        height: 30rem;
+    }
+    .introduced .safe .introduced-left{
+        line-height:5rem;
+    }
+    .introduced .safe{
+        height: 9rem;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .introduced .safe +.safe{
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+
+    .announce{
+        width: 90%;
+        font-size: 1.1rem;
+    }
+    .produce{
+        width: 90%;
+        height: 125rem;
+    }
+    .produce .produce-left{
+        width: 100%;
+        text-align: center;
+        height: 20rem;
+        line-height: 5rem;
+        border-bottom:0.5px solid #D9D9D9 ;
+    }
+    .produce .produce-left span{
+        font-size: 2.5rem;
+    }
+    .produce .produce-right{
+        width: 100%;
+    }
+    .produce .produce-left span{
+        font-size: 2.5rem;
+    }
+    .produce-right .details{
+        width: 100%;
+        height: 20rem;
+    }
+    .details .month{
+        width: calc(100%/3 - 0rem);
+    }
+    .details .month span{
+        font-size: 2.5rem;
+    }
+    .details .income{
+        font-size:1.2rem;
+        width: calc(100%/3*2 - 0rem);
+    }
+    .details .operate{
+        width: 100%;
+    }
+    .operate .operate-center,.operate .operate-center-special{
+        font-size: 1.5rem;
+    }
+
+    .about .about-img{
+        display: none;
+        visibility: hidden;
+    }
+    .about ul{
+        /*margin-left: 1%;*/
+        font-size: 1.2rem;
+        width: calc(100%/5 - 1.75rem);
+        text-align: center;
+    }
+    .about ul+ul{
+        margin-left: 1rem;
+    }
+
+
+}
